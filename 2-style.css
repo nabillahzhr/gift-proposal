@@ -1,0 +1,52 @@
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
+
+body, html { height: 100%; width: 100%; overflow: hidden; background: #0a0b1e; color: #fff; }
+
+/* SCREEN */
+.screen { display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; position: absolute; top:0; left:0; transition: all 0.5s ease; }
+.hidden { display: none; }
+
+/* LOGIN */
+.login-box { display: flex; flex-direction: column; gap: 15px; background: rgba(0,0,0,0.5); padding: 30px; border-radius: 15px; border: 2px solid #fff; text-align: center; }
+.login-box input { padding: 10px 15px; border-radius: 8px; border: 1px solid #fff; background: rgba(255,255,255,0.1); color: #fff; font-size: 16px; }
+.login-box input::placeholder { color: #ccc; }
+.login-box button { padding: 10px; border:none; border-radius:8px; background: linear-gradient(90deg,#6c63ff,#3b82f6); color:#fff; font-weight:600; cursor:pointer; transition: 0.3s; }
+.login-box button:hover { transform: scale(1.05); }
+
+/* ENVELOPE */
+.envelope { width:200px; height:120px; background:#ff6b6b; position:relative; cursor:pointer; display:flex; justify-content:center; align-items:center; border-radius:10px; font-weight:bold; font-size:18px; transition:0.3s; }
+.envelope:hover { transform: scale(1.05) rotate(-2deg); }
+.envelope .flap { position:absolute; top:0; left:0; width:100%; height:50%; background:#ff8787; clip-path: polygon(0 0, 100% 0, 50% 100%); border-top-left-radius:10px; border-top-right-radius:10px; }
+
+/* LETTER */
+.letter { background:#d8c8ae; color:#333; padding:30px; border-radius:15px; width:90%; max-width:600px; box-shadow:0 0 20px rgba(0,0,0,0.5); font-family:'Georgia', serif; line-height:1.6; text-align:left; position:relative; }
+.letter button { margin-top:10px; padding:10px 20px; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:0.3s; }
+.letter button:hover { transform: scale(1.05); }
+
+/* BUTTONS SURAT 2 */
+.btn-group { display:flex; flex-direction:column; gap:15px; margin-top:20px; }
+.btn-sky { background: linear-gradient(90deg,#a26f1d,#a26f1d); color:#fff; }
+.btn-off { background: #a47a35(97, 27, 27, 0.5); color:#e4b768; }
+.btn-sky:hover, .btn-off:hover { transform: scale(1.05); }
+
+/* BACKGROUND STARS */
+body::before { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:radial-gradient(ellipse at center, #0a0b1e 0%, #0c0f1f 100%); z-index:-2; }
+.star { position:absolute; background:#fff; border-radius:50%; width:2px; height:2px; animation: twinkle 3s infinite; }
+@keyframes twinkle { 0%,100%{opacity:0.2} 50%{opacity:1} }
+
+/* Add some random stars */
+.star:nth-child(1){top:10%; left:20%; animation-delay:0s;}
+.star:nth-child(2){top:30%; left:80%; animation-delay:1s;}
+.star:nth-child(3){top:50%; left:50%; animation-delay:2s;}
+.star:nth-child(4){top:70%; left:10%; animation-delay:3s;}
+.star:nth-child(5){top:80%; left:70%; animation-delay:4s;}
+
+/* Moon */
+body::after { content:""; position:absolute; top:50px; right:50px; width:100px; height:100px; border-radius:50%; background: radial-gradient(circle,#fff,#ccc); box-shadow:0 0 40px #fff; z-index:-1;}
+
+
+
+
+
+
